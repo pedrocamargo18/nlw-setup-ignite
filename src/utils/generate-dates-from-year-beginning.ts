@@ -10,6 +10,7 @@ export function GenerateDatesFromYearBeginning(){
 
     while( compareDate.isBefore(today)){
         dates.push(compareDate.toDate())
+        //Ta adicionando 1 dia a mais 
         compareDate = compareDate.add(1, 'day')
     }
 
