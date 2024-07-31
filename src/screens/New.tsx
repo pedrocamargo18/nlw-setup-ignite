@@ -40,17 +40,17 @@ export function New() {
   async function handleCreateNewHabit() {
     try {
       if (!title.trim() || weekDays.length === 0) {
-        Alert.alert("Novo Habito", "Informe o novo habito e escolha os dias.");
+        Alert.alert("Novo Hábito", "Informe o novo hábito e escolha os dias.");
       }
 
       await api.post("/habits", { title, weekDays });
       setTitle('')
       setWeekDays([])
 
-      Alert.alert('Novo Habito', 'Habito criado com sucesso.')
+      Alert.alert('Novo Hábito', 'Hábito criado com sucesso.')
     } catch (error) {
       console.log(error);
-      Alert.alert("Ops", "Nao foi possivel criar o novo habito.");
+      Alert.alert("Ops!", "Não foi possivel criar o novo hábito.");
     }
   }
 
@@ -62,10 +62,10 @@ export function New() {
       >
         <BackButton />
         <Text className="text-white mt-6 font-extrabold text-3xl">
-          Criar Habito
+          Criar Hábito
         </Text>
         <Text className="text-white mt-6 font-semibold text-base">
-          Qual o seu comprometimento?
+          Qual o seu Comprometimento?
         </Text>
         <TextInput
           className="h-12 pl-4 rounded-lg mt-3 bg-zinc-800 text-white focus:border-2 focus: border-green-600"

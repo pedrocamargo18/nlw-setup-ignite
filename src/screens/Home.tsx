@@ -32,7 +32,7 @@ export function Home() {
       const response = await api.get("/summary");
       setSummary(response.data);
     } catch (error) {
-      Alert.alert("OPs", "Nao foi possivle carregar o sumario de habitos.");
+      Alert.alert("Ops!", "Não foi possivel carregar o sumario de habitos.");
       console.log(error);
     } finally {
       setLoading(false);
